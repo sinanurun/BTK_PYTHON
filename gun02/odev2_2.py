@@ -1,0 +1,5 @@
+print("Merhaba benim Adım Sinan")
+print("Bilişim teknolojileri öğretmeniyim")
+print("15 yıldır eğitim ve bilişim alanında çalışıyorum")
+print("Btk'da Python eğitimine başladık")
+print("Keyifli bir 10 gün eğitimiz olacak")
