@@ -1,0 +1,3 @@
+btk python kursu
+izmir ilinde bulunan öğrencilere yönelik
+temel seviye Python programlama kursuna hoşgeldiniz
