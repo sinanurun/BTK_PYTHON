@@ -44,12 +44,14 @@ def istatistik(dosya_adi):
     dosya = open(dosya_adi, "r")
     print(dosya.readlines())
     dosya.close()
-
+def menu():
+    kgirisi = int(input("Oyun için :1 \n İstatistik için : 2\t Çıkış için: 3\t"))
+    return kgirisi
 
 while True:
     dosya_adi = "oyun.txt"
     dosya_kontrol(dosya_adi)
-    cevap = int(input("Oyun için :1 \n İstatistik için : 2\t Çıkış için: 3\t"))
+    cevap = menu()
     if cevap == 3:
         cikis()
     elif cevap == 1:
