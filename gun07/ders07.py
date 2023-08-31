@@ -29,3 +29,21 @@ class Calisan:
     @staticmethod
     def tel_no(telefon):
         return telefon.split(" ")
+
+print(Calisan.tel_no("0555 555 55 55"))
+
+
+personel1 = Calisan("Ali", "Demir", 2500)
+personel2 = Calisan("Kerim","Bakır",2000)
+personel1.arttir()
+print(personel1.maas)
+print(personel1.zam_oranı)
+Calisan.zam_orani_degis(1.2)
+print(personel1.zam_oranı)
+print(personel2.zam_oranı)
+print(Calisan.zam_oranı)
+
+mpersonel1 = "Sonay-Karaaslan-55000"
+
+yeni_personel = Calisan.ypersonel(mpersonel1)
+print(yeni_personel.ad)
