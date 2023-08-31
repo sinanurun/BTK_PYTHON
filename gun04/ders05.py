@@ -3,6 +3,8 @@ sebze = ['domates', 'biber']
 meyve = ['üzüm', 'çilek', 'kivi', 'karpuz', 'incir', 'ayva', 'armut', 'armut']
 sark = ["peynir", "helva", "bal"]
 yesillik = ["roka", "maydanoz", "tere"]
+#pazar_listesi = sebze + meyve
+#print(pazar_listesi)
 pazar_listesi = [sebze, meyve, sark, yesillik, "baklava"]
 print(pazar_listesi)
 print(pazar_listesi[0][0])

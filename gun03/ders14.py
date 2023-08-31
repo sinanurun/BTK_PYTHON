@@ -5,7 +5,7 @@ while True:
     if sayi == 0 or adet == 0:
         print("giridğiniz sayıların çarpımı", carpim)
         break
-    adet -= 1
     if sayi == 111:
         continue
+    adet -= 1
     carpim *= sayi
