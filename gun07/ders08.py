@@ -18,10 +18,10 @@ class Calisan():
         self.maas = (self.maas * self.zam_oranı)
 
 
-class gelistirici(calisan):
+class Gelistirici(Calisan):
     def __init__(self, ad, soyad, maas, p_dili):
-        # calisan.__init__(self,ad,soyad,maas)
-        super().__init__(ad, soyad, maas)
+        Calisan.__init__(self,ad,soyad,maas)
+        # super().__init__(ad, soyad, maas)
         self.p_dili = p_dili
         self.zam_oranı = 1.2
 
@@ -43,23 +43,23 @@ class yonetici(Calisan):
     def calisan_listele(self):
         for eleman in self.calisanlar:
             print(eleman.tamad())
-# personel1 = Calisan("ali","demir",2500)
-# personel2 = Calisan("kerim","bakir",1950)
+personel1 = Calisan("ali","demir",2500)
+personel2 = Calisan("kerim","bakir",1950)
 #
-# gel1 = gelistirici("mehmet","can",2250,"Python")
-# # print(gel1.tamad(), gel1.p_dili, gel1.maas)
-# gel1.arttir()
-# # print(gel1.maas)
+gel1 = Gelistirici("mehmet","can",2250,"Python")
+print(gel1.tamad(), gel1.p_dili, gel1.maas)
+gel1.arttir()
+print(gel1.maas)
 #
-# yonet1 = yonetici("kamil","eren",6500,[gel1,personel1])
-# print(yonet1.tamad())
-# print(yonet1.calisan_listele())
-# yonet1.eleman_ekle(personel2)
-# print(yonet1.calisan_listele())
-# yonet1.eleman_cikar(gel1)
-# print(yonet1.calisan_listele())
+yonet1 = yonetici("kamil","eren",6500,[gel1,personel1])
+print(yonet1.tamad())
+print(yonet1.calisan_listele())
+yonet1.eleman_ekle(personel2)
+print(yonet1.calisan_listele())
+yonet1.eleman_cikar(gel1)
+print(yonet1.calisan_listele())
 #
-# print(isinstance(personel2,yonetici))
+print(isinstance(personel2,yonetici))
 #
-# print(issubclass(Calisan,yonetici))
-# print(issubclass(gelistirici,Calisan))
+print(issubclass(Calisan,yonetici))
+print(issubclass(Gelistirici,Calisan))
