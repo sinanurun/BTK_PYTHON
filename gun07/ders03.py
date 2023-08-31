@@ -8,4 +8,4 @@ ogr1 = Ogrenci()
 print(ogr1.ad)
 print(ogr1.bolum)
 print(Ogrenci.bolum)
-print(Ogrenci.)
+
