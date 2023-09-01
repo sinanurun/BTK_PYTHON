@@ -9,7 +9,8 @@ if dosya_mevcut:
 else:
     print("veri tabanı yoktur")
 
-imlec.execute("SELECT * FROM kitap_bilgisi")
+# imlec.execute("SELECT * FROM kitap_bilgisi")
+imlec.execute("SELECT kitap_adi, kitap_yazari FROM kitap_bilgisi where begeni='***'")
 kitaplar = imlec.fetchall()
 print(kitaplar)
 # print(kitaplar[0])
