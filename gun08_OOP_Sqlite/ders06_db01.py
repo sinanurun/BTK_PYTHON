@@ -11,6 +11,8 @@ kitap_girisi = "INSERT INTO kitap_bilgisi VALUES ('Suç ve Ceza', 'Dostoyevski',
 
 imlec.execute(kitap_girisi)
 imlec.execute("INSERT INTO kitap_bilgisi VALUES ('Beyaz Diş', 'Jack LONDON', 'evet','***')")
+
+imlec.execute("INSERT INTO kitap_bilgisi VALUES ('Yunan Mitolojisi', 'Anna', 'hayır','****')")
 vt.commit()
 
 vt.close()
