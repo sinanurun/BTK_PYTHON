@@ -1,6 +1,5 @@
 import sys
 import veritabani_06 as baglanti
-
 print("-"*56)
 print("-"*10, "Kitaplık Programımıza Hoş Geldiniz", "-"*10)
 print("-"*56)
