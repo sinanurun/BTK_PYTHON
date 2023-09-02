@@ -5,13 +5,23 @@ print("-"*10, "Kitaplık Programımıza Hoş Geldiniz", "-"*10)
 print("-"*56)
 
 #baglanti.kekle("sinan@sinan.com",  12345)
-k_id = baglanti.k_giris("sinan@sinan.com",  12345)
 
+k_id = 0
 
 
 while 1 == 1:
     print("-"*10, "Yapmak istediğiniz işlemi Seçiniz", "-"*10)
     print("-" * 10, "(E)klemek,(L)istelemek,(G)üncellemek,(S)ilmek,(Ç)ıkmak", "-" * 10)
+
+    while k_id == 0:
+        eposta = input("Kullanıcı e posta giriniz")
+        sifre = input("kullanıcı şifre giriniz")
+        k_id = baglanti.k_giris("sinan@sinan.com",  12345)
+        if k_id == 0 :
+            continue
+        else:
+            break
+
     islem = input()
     if islem == "Ç" or islem == "ç":
         baglanti.cikis()

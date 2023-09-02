@@ -17,6 +17,7 @@ def k_giris(eposta,sifre):
         return kullanici_id
     except:
         print("böyle bir kullanıcı yok")
+        return 0
 def ekle(k_id,kitap_adi="",kitap_yazari="",okunma_durumu="",begeni=""):
     imlec.execute(
         "CREATE TABLE IF NOT EXISTS kitaplik_tb (kitap_id INTEGER PRIMARY KEY  AUTOINCREMENT, kitap_adi,kitap_yazari,okunma_durumu,begeni, k_id INTEGER)")
