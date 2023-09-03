@@ -15,6 +15,8 @@ class Anaekran(QMainWindow,Ui_AnaEkran):
         self.actionKitap_Listeleme.triggered.connect(self.kitap_listele)
         self.actionKitap_Silme.triggered.connect(self.kitap_silme)
         self.actionKitap_Guncelleme.triggered.connect(self.kitap_guncelle)
+        self.tableWidget.setRowCount(0)
+        self.kitap_listele()
     def kitap_ekle(self):
         print("kitap ekle tıklandı")
         self.setCentralWidget(KitapEkleEkrani(self.k_id))
@@ -22,15 +24,17 @@ class Anaekran(QMainWindow,Ui_AnaEkran):
         print("kitap liste tıklandı")
         kitaplar = baglanti.listele(self.k_id)
         satir_sayisi = len(kitaplar)
+        print(satir_sayisi)
         self.tableWidget.setRowCount(satir_sayisi)
         k = 0
         for a in kitaplar:
+            print("*",a)
             self.tableWidget.setItem(k, 0, QTableWidgetItem(str(a[0])))
             self.tableWidget.setItem(k, 1, QTableWidgetItem(str(a[1])))
             self.tableWidget.setItem(k, 2, QTableWidgetItem(str(a[2])))
             self.tableWidget.setItem(k, 3, QTableWidgetItem(str(a[3])))
+            k += 1
 
-        self.karsilama()
     def kitap_silme(self):
         print("kitap silme tıklandı")
     def kitap_guncelle(self):
@@ -40,6 +44,6 @@ class Anaekran(QMainWindow,Ui_AnaEkran):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    pencere = Anaekran()
+    pencere = Anaekran(1)
     pencere.show()
     sys.exit(app.exec_())

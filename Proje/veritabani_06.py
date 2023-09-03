@@ -30,7 +30,7 @@ def ekle(k_id,kitap_adi="",kitap_yazari="",okunma_durumu="",begeni=""):
 def listele(k_id):
     imlec.execute("SELECT * FROM kitaplik_tb where k_id='{}'".format(k_id))
     kitaplar = imlec.fetchall()
-#    print(kitaplar)
+    print(kitaplar)
     for i in kitaplar:
         for k in i:
             print(k, end=" ")
