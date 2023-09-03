@@ -14,18 +14,35 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="AnaForm">
-   <widget class="QLabel" name="label">
+   <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>190</y>
-      <width>211</width>
-      <height>16</height>
+      <x>30</x>
+      <y>20</y>
+      <width>741</width>
+      <height>521</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Ana ekran</string>
-    </property>
+    <column>
+     <property name="text">
+      <string>Kitap_İd</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Kitap Adı</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Okunma Durumu</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Kitap Yazarı</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

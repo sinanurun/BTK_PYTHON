@@ -13,6 +13,7 @@ class Anaekran(QMainWindow,Ui_AnaEkran):
         self.actionKitap_Listeleme.triggered.connect(self.kitap_listele)
         self.actionKitap_Silme.triggered.connect(self.kitap_silme)
         self.actionKitap_Guncelleme.triggered.connect(self.kitap_guncelle)
+
     def kitap_ekle(self):
         print("kitap ekle tıklandı")
         self.setCentralWidget(KitapEkleEkrani())
