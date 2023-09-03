@@ -5,10 +5,8 @@ from PyQt5.QtWidgets import *
 
 class Anaekran(QMainWindow,Ui_AnaEkran):
     def __init__(self):
-        super().__init__()
+        super(Anaekran,self).__init__()
         self.karsilama()
-
-
     def karsilama(self):
         self.setupUi(self)
         self.actionKitapEkleme.triggered.connect(self.kitap_ekle)
@@ -20,7 +18,7 @@ class Anaekran(QMainWindow,Ui_AnaEkran):
         self.setCentralWidget(KitapEkleEkrani())
     def kitap_listele(self):
         print("kitap liste tıklandı")
-        self.setCentralWidget(KitapEkleEkrani())
+        self.setupUi(self)
     def kitap_silme(self):
         print("kitap silme tıklandı")
     def kitap_guncelle(self):

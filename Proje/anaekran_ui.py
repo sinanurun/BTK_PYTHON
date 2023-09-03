@@ -17,6 +17,9 @@ class Ui_AnaEkran(object):
         AnaEkran.resize(800, 600)
         self.AnaForm = QtWidgets.QWidget(AnaEkran)
         self.AnaForm.setObjectName("AnaForm")
+        self.label = QtWidgets.QLabel(self.AnaForm)
+        self.label.setGeometry(QtCore.QRect(340, 190, 211, 16))
+        self.label.setObjectName("label")
         AnaEkran.setCentralWidget(self.AnaForm)
         self.menubar = QtWidgets.QMenuBar(AnaEkran)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 22))
@@ -67,6 +70,7 @@ class Ui_AnaEkran(object):
     def retranslateUi(self, AnaEkran):
         _translate = QtCore.QCoreApplication.translate
         AnaEkran.setWindowTitle(_translate("AnaEkran", "MainWindow"))
+        self.label.setText(_translate("AnaEkran", "Ana ekran"))
         self.menuKitap_Listesi.setTitle(_translate("AnaEkran", "Kitap Listesi"))
         self.menuKitap_Ekle.setTitle(_translate("AnaEkran", "Kitap Ekle"))
         self.menuKitap_Guncelle.setTitle(_translate("AnaEkran", "Kitap Güncelle"))
