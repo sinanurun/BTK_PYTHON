@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from giris_ui import Ui_Giris
 from anaekran import Anaekran
-
+import veritabani_06 as baglanti
 class GirisPenceresi(QWidget, Ui_Giris):
     def __init__(self):
         super().__init__()
@@ -10,20 +10,18 @@ class GirisPenceresi(QWidget, Ui_Giris):
         # **** şifre olarak göstermek için
         self.sifreText.setEchoMode(QLineEdit.Password)
         self.GirisButonu.clicked.connect(self.fGirisKontrol)
-
     def fGirisKontrol(self):
         self.mesajLabel.setText("Giriş Butonu Tıklandı")
-        # bolum 2
         eposta = self.epostaText.text()
         sifre = self.sifreText.text()
-        if eposta == "ali" and sifre == "12345":
+        k_id = baglanti.k_giris(eposta, sifre)
+        if k_id == 0:
+            self.mesajLabel.setText("Hatalı Giriş Yapıldı")
+        else:
             self.mesajLabel.setText("Giriş Onaylandı")
             self.close()
             self.ype = Anaekran()
             self.ype.show()
-        else:
-            self.mesajLabel.setText("Hatalı Giriş Yapıldı")
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
