@@ -6,27 +6,29 @@ import veritabani_06 as baglanti
 
 class Anaekran(QMainWindow,Ui_AnaEkran):
     def __init__(self,k_id):
-        super(Anaekran,self).__init__()
+        super().__init__()
         self.k_id = k_id
         self.karsilama()
+        self.kitap_listele()
     def karsilama(self):
         self.setupUi(self)
         self.actionKitapEkleme.triggered.connect(self.kitap_ekle)
         self.actionKitap_Listeleme.triggered.connect(self.kitap_listele)
         self.actionKitap_Silme.triggered.connect(self.kitap_silme)
         self.actionKitap_Guncelleme.triggered.connect(self.kitap_guncelle)
-        self.tableWidget.setRowCount(0)
-        self.kitap_listele()
+
     def kitap_ekle(self):
         print("kitap ekle tıklandı")
         self.setCentralWidget(KitapEkleEkrani(self.k_id))
     def kitap_listele(self):
+        self.karsilama()
         print("kitap liste tıklandı")
         kitaplar = baglanti.listele(self.k_id)
         satir_sayisi = len(kitaplar)
         print(satir_sayisi)
         self.tableWidget.setRowCount(satir_sayisi)
         k = 0
+        print("hata durumu")
         for a in kitaplar:
             print("*",a)
             self.tableWidget.setItem(k, 0, QTableWidgetItem(str(a[0])))
