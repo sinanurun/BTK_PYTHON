@@ -10,6 +10,13 @@ class GirisPenceresi(QWidget,Ui_Giris):
 
     def fGirisKontrol(self):
         self.mesajLabel.setText("Giriş Butonu Tıklandı")
+        # bolum 2
+        eposta = self.epostaText.text()
+        sifre = self.sifreText.text()
+        if eposta == "ali" and sifre == "12345":
+            self.mesajLabel.setText("Giriş Onaylandı")
+        else:
+            self.mesajLabel.setText("Hatalı Giriş Yapıldı")
 
 
 if __name__ == "__main__":
