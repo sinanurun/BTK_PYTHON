@@ -24,3 +24,5 @@ if __name__ == "__main__":
     pencere = GirisPenceresi()
     pencere.show()
     sys.exit(app.exec_())
+
+# python -m PyQt5.uic.pyuic -x [FILENAME].ui -o [FILENAME].py
