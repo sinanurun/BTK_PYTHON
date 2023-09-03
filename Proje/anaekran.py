@@ -16,7 +16,7 @@ class Anaekran(QMainWindow,Ui_AnaEkran):
         self.actionKitap_Guncelleme.triggered.connect(self.kitap_guncelle)
     def kitap_ekle(self):
         print("kitap ekle tıklandı")
-        self.setCentralWidget(KitapEkleEkrani())
+        self.setCentralWidget(KitapEkleEkrani(self.k_id))
     def kitap_listele(self):
         print("kitap liste tıklandı")
         self.karsilama()
