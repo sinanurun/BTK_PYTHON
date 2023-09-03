@@ -38,6 +38,22 @@ class Ui_AnaEkran(object):
         self.statusbar = QtWidgets.QStatusBar(AnaEkran)
         self.statusbar.setObjectName("statusbar")
         AnaEkran.setStatusBar(self.statusbar)
+        self.actionKitapEkle = QtWidgets.QAction(AnaEkran)
+        self.actionKitapEkle.setObjectName("actionKitapEkle")
+        self.actionKitapEkleme = QtWidgets.QAction(AnaEkran)
+        self.actionKitapEkleme.setObjectName("actionKitapEkleme")
+        self.action_cikis = QtWidgets.QAction(AnaEkran)
+        self.action_cikis.setObjectName("action_cikis")
+        self.actionKitap_Guncelleme = QtWidgets.QAction(AnaEkran)
+        self.actionKitap_Guncelleme.setObjectName("actionKitap_Guncelleme")
+        self.actionKitap_Silme = QtWidgets.QAction(AnaEkran)
+        self.actionKitap_Silme.setObjectName("actionKitap_Silme")
+        self.actionKitap_Listeleme = QtWidgets.QAction(AnaEkran)
+        self.actionKitap_Listeleme.setObjectName("actionKitap_Listeleme")
+        self.menuKitap_Listesi.addAction(self.actionKitap_Listeleme)
+        self.menuKitap_Ekle.addAction(self.actionKitapEkleme)
+        self.menuKitap_Guncelle.addAction(self.actionKitap_Guncelleme)
+        self.menuSil.addAction(self.actionKitap_Silme)
         self.menubar.addAction(self.menuKitap_Listesi.menuAction())
         self.menubar.addAction(self.menuKitap_Ekle.menuAction())
         self.menubar.addAction(self.menuKitap_Guncelle.menuAction())
@@ -45,6 +61,7 @@ class Ui_AnaEkran(object):
         self.menubar.addAction(self.menu_Cikis.menuAction())
 
         self.retranslateUi(AnaEkran)
+        self.action_cikis.triggered['bool'].connect(AnaEkran.close) # type: ignore
         QtCore.QMetaObject.connectSlotsByName(AnaEkran)
 
     def retranslateUi(self, AnaEkran):
@@ -55,6 +72,12 @@ class Ui_AnaEkran(object):
         self.menuKitap_Guncelle.setTitle(_translate("AnaEkran", "Kitap Güncelle"))
         self.menuSil.setTitle(_translate("AnaEkran", "Sil"))
         self.menu_Cikis.setTitle(_translate("AnaEkran", "Çıkış"))
+        self.actionKitapEkle.setText(_translate("AnaEkran", "KitapEkle"))
+        self.actionKitapEkleme.setText(_translate("AnaEkran", "KitapEkleme"))
+        self.action_cikis.setText(_translate("AnaEkran", "Çıkış"))
+        self.actionKitap_Guncelleme.setText(_translate("AnaEkran", "Kitap Guncelleme"))
+        self.actionKitap_Silme.setText(_translate("AnaEkran", "Kitap Silme"))
+        self.actionKitap_Listeleme.setText(_translate("AnaEkran", "Kitap Listeleme"))
 
 
 if __name__ == "__main__":

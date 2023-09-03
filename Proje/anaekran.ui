@@ -27,11 +27,13 @@
     <property name="title">
      <string>Kitap Listesi</string>
     </property>
+    <addaction name="actionKitap_Listeleme"/>
    </widget>
    <widget class="QMenu" name="menuKitap_Ekle">
     <property name="title">
      <string>Kitap Ekle</string>
     </property>
+    <addaction name="actionKitapEkleme"/>
    </widget>
    <widget class="QMenu" name="menuKitap_Guncelle">
     <property name="font">
@@ -42,11 +44,13 @@
     <property name="title">
      <string>Kitap Güncelle</string>
     </property>
+    <addaction name="actionKitap_Guncelleme"/>
    </widget>
    <widget class="QMenu" name="menuSil">
     <property name="title">
      <string>Sil</string>
     </property>
+    <addaction name="actionKitap_Silme"/>
    </widget>
    <widget class="QMenu" name="menu_Cikis">
     <property name="title">
@@ -60,7 +64,54 @@
    <addaction name="menu_Cikis"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionKitapEkle">
+   <property name="text">
+    <string>KitapEkle</string>
+   </property>
+  </action>
+  <action name="actionKitapEkleme">
+   <property name="text">
+    <string>KitapEkleme</string>
+   </property>
+  </action>
+  <action name="action_cikis">
+   <property name="text">
+    <string>Çıkış</string>
+   </property>
+  </action>
+  <action name="actionKitap_Guncelleme">
+   <property name="text">
+    <string>Kitap Guncelleme</string>
+   </property>
+  </action>
+  <action name="actionKitap_Silme">
+   <property name="text">
+    <string>Kitap Silme</string>
+   </property>
+  </action>
+  <action name="actionKitap_Listeleme">
+   <property name="text">
+    <string>Kitap Listeleme</string>
+   </property>
+  </action>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>action_cikis</sender>
+   <signal>triggered(bool)</signal>
+   <receiver>AnaEkran</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

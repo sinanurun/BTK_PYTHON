@@ -7,6 +7,8 @@ class GirisPenceresi(QWidget, Ui_Giris):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        # **** şifre olarak göstermek için
+        self.sifreText.setEchoMode(QLineEdit.Password)
         self.GirisButonu.clicked.connect(self.fGirisKontrol)
 
     def fGirisKontrol(self):
@@ -16,7 +18,7 @@ class GirisPenceresi(QWidget, Ui_Giris):
         sifre = self.sifreText.text()
         if eposta == "ali" and sifre == "12345":
             self.mesajLabel.setText("Giriş Onaylandı")
-            self.hide()
+            self.close()
             self.ype = Anaekran()
             self.ype.show()
         else:
