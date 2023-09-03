@@ -20,7 +20,7 @@ class GirisPenceresi(QWidget, Ui_Giris):
         else:
             self.mesajLabel.setText("Giriş Onaylandı")
             self.close()
-            self.ype = Anaekran()
+            self.ype = Anaekran(k_id)
             self.ype.show()
 
 if __name__ == "__main__":

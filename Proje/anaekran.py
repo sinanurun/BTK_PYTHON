@@ -4,8 +4,9 @@ from anaekran_ui import Ui_AnaEkran
 from PyQt5.QtWidgets import *
 
 class Anaekran(QMainWindow,Ui_AnaEkran):
-    def __init__(self):
+    def __init__(self,k_id):
         super(Anaekran,self).__init__()
+        self.k_id = k_id
         self.karsilama()
     def karsilama(self):
         self.setupUi(self)
