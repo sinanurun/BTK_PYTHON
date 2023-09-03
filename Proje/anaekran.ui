@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnaEkran</class>
+ <widget class="QMainWindow" name="AnaEkran">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="AnaForm"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuKitap_Listesi">
+    <property name="title">
+     <string>Kitap Listesi</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuKitap_Ekle">
+    <property name="title">
+     <string>Kitap Ekle</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuKitap_Guncelle">
+    <property name="font">
+     <font>
+      <pointsize>5</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>Kitap Güncelle</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSil">
+    <property name="title">
+     <string>Sil</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_Cikis">
+    <property name="title">
+     <string>Çıkış</string>
+    </property>
+   </widget>
+   <addaction name="menuKitap_Listesi"/>
+   <addaction name="menuKitap_Ekle"/>
+   <addaction name="menuKitap_Guncelle"/>
+   <addaction name="menuSil"/>
+   <addaction name="menu_Cikis"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

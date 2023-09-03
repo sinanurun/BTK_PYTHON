@@ -1,8 +1,9 @@
 import sys
 from PyQt5.QtWidgets import *
 from giris_ui import Ui_Giris
+from anaekran import Anaekran
 
-class GirisPenceresi(QWidget,Ui_Giris):
+class GirisPenceresi(QWidget, Ui_Giris):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -15,6 +16,9 @@ class GirisPenceresi(QWidget,Ui_Giris):
         sifre = self.sifreText.text()
         if eposta == "ali" and sifre == "12345":
             self.mesajLabel.setText("Giriş Onaylandı")
+            self.hide()
+            self.ype = Anaekran()
+            self.ype.show()
         else:
             self.mesajLabel.setText("Hatalı Giriş Yapıldı")
 
