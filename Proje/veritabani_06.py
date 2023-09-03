@@ -35,6 +35,7 @@ def listele(k_id):
         for k in i:
             print(k, end=" ")
         print("")
+    return kitaplar
 
 def guncelle(guncellenecek):
     gkitap = input("Güncel kitap adını giriniz")
